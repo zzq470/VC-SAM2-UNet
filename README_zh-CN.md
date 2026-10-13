@@ -7,7 +7,7 @@
 
 **机构：** 西交利物浦大学人工智能与先进技术学院；佛罗伦萨大学神经科学、心理学、药物研究与儿童健康系；佛罗伦萨 Careggi 大学医院新生儿科。Ziqi Zhao 与 Zhenghao Jiang 贡献相同；Netzahualcoyotl Hernandez-Cruz 为通讯作者。
 
-> 当前仓库为私有发布候选版。数据、权重和原始 SAM2 运行环境未随仓库提供，完整复现状态见[复现说明](docs/reproduction_status.md)。
+> 当前仓库为公开的研究代码仓库。数据、权重和原始 SAM2 运行环境未随仓库提供，完整复现状态见[复现说明](docs/reproduction_status.md)。
 
 ## 方法概览
 
@@ -19,9 +19,9 @@ VC-SAM2-UNet 在 SAM2-UNet 上加入两个模块：残差 Metadata-FiLM（RMF）
 - A3：完整 VC-SAM2-UNet，GT-view 训练；
 - Auto-Hard/Auto-Soft：同一个 A3 分割 checkpoint，分别使用冻结 ResNet-18 的 argmax 类别或四类概率。
 
-![VC-SAM2-UNet 架构图](assets/vc_sam2_unet_architecture.svg)
+![VC-SAM2-UNet 架构图](assets/vc_sam2_unet_architecture.png)
 
-该架构图不含患者影像、病例编号、标注或预测样例。
+该图按用户提供的论文插图原样收录，含论文中的超声输入示例和合成 mask 可视化；仓库未包含数据集、病例编号或模型权重。
 
 ## 结果
 
@@ -82,4 +82,4 @@ python -m pip install "git+https://github.com/facebookresearch/sam2.git@2b90b9f5
 
 本代码仅用于研究和教育，不是医疗器械，不能用于诊断、治疗或临床决策。
 
-仓库只包含不涉及病例图像的架构图。定性病例图、Grad-CAM 和 confusion figure 暂不发布，因为尚未确认患者来源图像的再分发许可。
+仓库收录了用户提供的论文架构图（其中含一个超声输入示例和合成 mask 可视化）；未单独打包数据集图像、病例级定性结果、Grad-CAM 或 confusion figure。

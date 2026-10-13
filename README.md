@@ -9,7 +9,7 @@ Manuscript prepared for IECBES 2026. This repository does not claim acceptance, 
 
 ![IECBES 2026 manuscript](https://img.shields.io/badge/venue-IECBES%202026-1f6feb) ![Python](https://img.shields.io/badge/Python-3.10%2B-3776ab) ![PyTorch](https://img.shields.io/badge/PyTorch-2.5.1%2Bcu124-ee4c2c)
 
-> Repository status: private release candidate. The dataset, checkpoints, and exact licensed SAM2 runtime are not bundled. See [reproduction status](docs/reproduction_status.md) before interpreting the results.
+> Repository status: public research code release. The dataset, checkpoints, and exact licensed SAM2 runtime are not bundled. See [reproduction status](docs/reproduction_status.md) before interpreting the results.
 
 ## Overview
 
@@ -20,9 +20,9 @@ VC-SAM2-UNet extends SAM2-UNet for four-view, 14-channel fetal cardiac ultrasoun
 
 The view can be an annotated GT view, a frozen ResNet-18 argmax prediction (Auto-Hard), or the four classifier probabilities (Auto-Soft). Auto-Hard and Auto-Soft reuse the same full segmentation checkpoint; they are inference modes, not separately trained segmentation networks.
 
-![VC-SAM2-UNet architecture](assets/vc_sam2_unet_architecture.svg)
+![VC-SAM2-UNet architecture](assets/vc_sam2_unet_architecture.png)
 
-The diagram is a project architecture asset and contains no patient image, mask, case identifier, or prediction example.
+This architecture figure is reproduced from the user-provided manuscript image. It includes the manuscript's ultrasound input example and a composite mask visualization; no dataset, case identifier, or checkpoint is included.
 
 ## Main Contributions
 
@@ -71,7 +71,7 @@ These values are transcribed from and checked against the final XEC aggregate CS
 
 ## Qualitative Results and Figures
 
-The architecture figure above is the only paper figure included. Although paper-derived images were authorized for use in this task, the qualitative ultrasound panels are not redistributed in this repository so that clinical-image sharing remains independently reviewable by all data holders and institutions. This repository therefore does not claim to reproduce the paper's Grad-CAM or case-level qualitative figures.
+The architecture figure above is reproduced from the paper image supplied for this repository. Separate case-level qualitative panels, Grad-CAM maps, and confusion figures are not included.
 
 ## Method and Protocol
 
@@ -192,7 +192,7 @@ The test command is intentionally separate from seed selection. Select each conf
 ## Repository Layout
 
 ```text
-assets/                 non-clinical architecture diagram
+assets/                 manuscript architecture figure
 configs/                public label/view maps and frozen protocol
 data_processing/        dataset reader and private-manifest validator
 models/                  baseline, full, ablation, and classifier definitions
@@ -208,7 +208,7 @@ third_party/licenses/    retained upstream Apache-2.0 license texts
 
 No original ultrasound, masks, split/case manifest, trained checkpoint, prediction, private log, SSH material, or HPC path is included. Do not upload such files without explicit data-holder and institutional authorization. Model initialization weights and trained checkpoints must be obtained separately from their authorized owners.
 
-The architecture diagram is the only paper-derived figure included. It contains no clinical image panels. Qualitative cases, Grad-CAM maps, and confusion figures are omitted because redistribution permission for those patient-derived visuals has not been established.
+The supplied manuscript architecture figure includes one ultrasound input example and a composite mask visualization. No dataset images, case-level qualitative panels, Grad-CAM maps, or confusion figures are bundled separately.
 
 The repository is currently private and has no project-level license. Third-party license texts are retained for the upstream components. Do not add MIT or another project license until all authors/institutional owners approve the release terms.
 
