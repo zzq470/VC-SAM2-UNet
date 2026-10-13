@@ -1,0 +1,34 @@
+{
+  "4CHV": [
+    "Descending Aorta",
+    "Heart (Whole)",
+    "Left Atrium",
+    "Left Ventricle",
+    "Right Atrium",
+    "Right Ventricle",
+    "Thoracic Cavity"
+  ],
+  "LVOT": [
+    "Ascending Aorta",
+    "Left Atrium",
+    "Left Ventricle",
+    "Right Ventricle",
+    "Thoracic Cavity"
+  ],
+  "RVOT": [
+    "Ascending Aorta",
+    "Descending Aorta",
+    "Left Pulmonary Artery",
+    "Main Pulmonary Artery",
+    "Right Pulmonary Artery",
+    "Superior Vena Cava",
+    "Thoracic Cavity"
+  ],
+  "3VTV": [
+    "Aortic Transverse Arch",
+    "Main Pulmonary Artery",
+    "Superior Vena Cava",
+    "Thoracic Cavity",
+    "Trachea"
+  ]
+}

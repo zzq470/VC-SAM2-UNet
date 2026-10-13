@@ -1,0 +1,4 @@
+configuration,segmentation_checkpoint_seed,view_mode,test_images,test_dice,test_iou
+Full VC-SAM2-UNet,1337,GT View,179,0.821411,0.702146
+Full VC-SAM2-UNet,1337,Auto-Hard,179,0.813128,0.689973
+Full VC-SAM2-UNet,1337,Auto-Soft,179,0.806549,0.681494

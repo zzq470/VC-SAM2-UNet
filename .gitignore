@@ -1,0 +1,46 @@
+# Protected clinical data and private manifests
+data/
+datasets/
+**/all_1000_samples.csv
+**/train.csv
+**/val.csv
+**/valid.csv
+**/test.csv
+**/*manifest*private*
+**/*patient*
+**/*identifier*
+
+# Model weights and predictions
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+checkpoints/
+predictions/
+outputs/
+runs/
+logs/
+
+# Runtime artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# Local/HPC configuration and temporary exports
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*credential*
+*token*
+*secret*
+*_export_staging/
+_source_import/

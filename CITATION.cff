@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the manuscript and the upstream SAM2-UNet/SAM 2 projects."
+title: "VC-SAM2-UNet: View-Conditioned SAM2-UNet for Multi-Label Fetal Cardiac Ultrasound Segmentation"
+authors:
+  - family-names: Zhao
+    given-names: Ziqi
+  - family-names: Jiang
+    given-names: Zhenghao
+  - family-names: Fazi
+    given-names: Camilla
+  - family-names: Hernandez-Cruz
+    given-names: Netzahualcoyotl
+date-released: 2026-10-14
+repository-code: "https://github.com/zzq470/VC-SAM2-UNet"
+keywords:
+  - SAM2-UNet
+  - fetal cardiac ultrasound
+  - multi-label segmentation
+  - view conditioning
+  - medical image segmentation

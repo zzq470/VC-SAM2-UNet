@@ -1,0 +1,5 @@
+configuration,validation_dice_mean,validation_dice_std,validation_seed_count,seedmax,seedmax_best_epoch,test_images,test_dice,test_iou
+SAM2-UNet baseline,0.787813,0.004763,10,9102,70,179,0.790819,0.661626
+Metadata-FiLM only (RMF),0.823092,0.002428,10,5772,39,179,0.813526,0.691043
+Selective DPBiFPN only (GSDB),0.787431,0.004639,10,1337,68,179,0.799759,0.673373
+Full VC-SAM2-UNet,0.820413,0.005136,10,1337,71,179,0.821411,0.702146

@@ -1,0 +1,9 @@
+{
+  "architecture": "V0_resnet18",
+  "seed": 3407,
+  "selection_split": "validation",
+  "selection_rule": "architecture by five-seed mean macro-F1, then accuracy, worst-view recall, and stability; checkpoint by best validation macro-F1",
+  "test_images_read_during_selection": 0,
+  "connected_to_segmentation_training": false,
+  "checkpoint_available_in_repository": false
+}

@@ -1,0 +1,44 @@
+{
+  "paper_title": "VC-SAM2-UNet: View-Conditioned SAM2-UNet for Multi-Label Fetal Cardiac Ultrasound Segmentation",
+  "dataset": {
+    "images_total": 893,
+    "split_counts": {"train": 625, "validation": 89, "test": 179},
+    "views": ["4CHV", "LVOT", "RVOT", "3VTV"],
+    "outputs": 14,
+    "label_mode": "independent overlapping binary masks"
+  },
+  "segmentation": {
+    "input_size": [352, 352],
+    "image_resize": "Pillow bilinear to 352x352; no crop or aspect-preserving pad",
+    "mask_resize": "Pillow nearest-neighbor",
+    "image_channels": "grayscale source converted to RGB",
+    "normalization": {
+      "mean": [0.485, 0.456, 0.406],
+      "std": [0.229, 0.224, 0.225]
+    },
+    "activation": "sigmoid per channel",
+    "threshold": 0.5,
+    "partial_label_validity": "per-image, per-channel validity mask; invalid channels excluded from loss and metrics",
+    "loss": "masked BCE plus Dice averaged over final, side1, and side2 outputs",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "scheduler": "CosineAnnealingLR, eta_min=0.000005",
+    "epochs": 100,
+    "batch_size": 2,
+    "augmentation": "deterministic per-epoch horizontal flip plan",
+    "model_selection": "highest validation macro Dice; strict best checkpoint",
+    "test_time_augmentation": false,
+    "calibration": false,
+    "postprocessing": false
+  },
+  "view_classifier": {
+    "architecture": "ResNet-18",
+    "classifier_input_size": [224, 224],
+    "resize": "aspect-preserving bilinear resize then zero padding",
+    "normalization": "ImageNet mean/std",
+    "selected_checkpoint_seed": 3407,
+    "selection_split": "validation",
+    "selection_rule": "five-seed mean macro-F1, then accuracy, worst-view recall, and stability; checkpoint by validation macro-F1"
+  }
+}
